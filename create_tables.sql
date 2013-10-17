@@ -12,7 +12,7 @@ CREATE TABLE classes(
 	class_id SERIAL PRIMARY KEY,
 	teacher_id integer REFERENCES teachers,
 	room_number text REFERENCES rooms,
-	school_year integer
+	school_year date
 );
 
 CREATE TABLE students(
@@ -31,7 +31,8 @@ CREATE TABLE class_roll(
 CREATE TABLE laps(
 	laps_id SERIAL PRIMARY KEY,
 	date_completed date,
-	student_id integer REFERENCES students
+	student_id integer REFERENCES students,
+	laps integer
 );
 	
 	
